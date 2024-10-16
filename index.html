@@ -1,18 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Image Filter and Download</title>
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
     <h1>Image Filter and Download</h1>
-    
     <img id="image" src="600.png" alt="Sample Image">
-    
     <div class="buttons">
         <button id="bwButton">Make Image Black and White</button>
         <button id="downloadButton">Download Image</button>
@@ -24,7 +20,7 @@
         const downloadButton = document.getElementById('downloadButton');
         
         // Toggle black and white effect
-        bwButton.addEventListener('click', function() {
+        bwButton.addEventListener('click', () => {
             image.classList.toggle('img');
         });
 
