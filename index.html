@@ -1,15 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Image Filter and Download</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
 
+<body>
     <h1>Image Filter and Download</h1>
+    
     <img id="image" src="600.png" alt="Sample Image">
+    
     <div class="buttons">
         <button id="bwButton">Make Image Black and White</button>
         <button id="downloadButton">Download Image</button>
@@ -19,13 +22,14 @@
         const image = document.getElementById('image');
         const bwButton = document.getElementById('bwButton');
         const downloadButton = document.getElementById('downloadButton');
-
-        bwButton.addEventListener('click', () => {
-            image.style.filter = 'grayscale(100%)';
+        
+        // Toggle black and white effect
+        bwButton.addEventListener('click', function() {
+            image.classList.toggle('img');
         });
 
+        // Download the image
         downloadButton.addEventListener('click', () => {
-            // Create an invisible link element
             const link = document.createElement('a');
             link.href = image.src;
             link.download = 'black_and_white_image.png';
@@ -34,6 +38,6 @@
             document.body.removeChild(link);
         });
     </script>
-
+    
 </body>
 </html>
